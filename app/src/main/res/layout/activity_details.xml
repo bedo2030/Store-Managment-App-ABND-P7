@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.project_8_inventory_1.DetailsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/details_img_book_thumbnail"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/default_book" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp">
+            <TextView
+                style="@style/DetailsActivityBookAttributesStyle"
+                android:text="@string/details_book_name"/>
+            <TextView
+                android:id="@+id/details_text_book_name"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                tools:text="Test Book Name"
+                android:maxLines="3"
+                android:ellipsize="end"
+                style="@style/DetailsActivityBookAttributesValueStyle" />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="#ff0000"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp">
+            <TextView
+                style="@style/DetailsActivityBookAttributesStyle"
+                android:text="@string/details_book_price"/>
+            <TextView
+                android:id="@+id/details_text_book_price"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                style="@style/DetailsActivityBookAttributesValueStyle"
+                tools:text="50$"/>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="#ff0000"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp">
+            <TextView
+                style="@style/DetailsActivityBookAttributesStyle"
+                android:text="@string/details_book_quantity"
+                android:layout_gravity="center_vertical"/>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/details_button_quantity_decrease"
+                    style="@style/GeneralButtonStyle"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:text="-"/>
+                <TextView
+                    android:id="@+id/details_text_book_quantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    style="@style/DetailsActivityBookAttributesValueStyle"
+                    tools:text="56"/>
+                <Button
+                    android:id="@+id/details_button_quantity_increase"
+                    style="@style/GeneralButtonStyle"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:text="+"/>
+            </LinearLayout>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="#ff0000"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:id="@+id/textView"
+                style="@style/DetailsActivityBookAttributesStyle"
+                android:text="@string/details_book_supplier_name" />
+
+            <TextView
+                android:id="@+id/details_text_book_supplier_name"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                tools:text="Test Book Supplier Name"
+                style="@style/DetailsActivityBookAttributesValueStyle"/>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="#ff0000"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                style="@style/DetailsActivityBookAttributesStyle"
+                android:text="@string/details_book_supplier_phone_number" />
+
+            <TextView
+                android:id="@+id/details_text_book_supplier_phone_number"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                tools:text="00201094416464"
+                style="@style/DetailsActivityBookAttributesValueStyle"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="#ff0000"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp">
+            <Button
+                android:id="@+id/details_button_edit"
+                style="@style/GeneralButtonStyle"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="@string/details_btn_edit"
+                android:layout_marginRight="16dp"/>
+            <Button
+                android:id="@+id/details_button_delete"
+                style="@style/GeneralButtonStyle"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="@string/details_btn_delete"
+                android:layout_marginRight="16dp"/>
+            <Button
+                android:id="@+id/details_button_order"
+                style="@style/GeneralButtonStyle"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="@string/details_btn_order"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

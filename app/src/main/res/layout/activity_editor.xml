@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:context="com.example.android.project_8_inventory_1.EditorActivity">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/editor_book_thumbnail_title"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    style="@style/DetailsActivityBookAttributesStyle"/>
+                <Button
+                    android:id="@+id/btn_add_book_thumbnail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    style="@style/GeneralButtonStyle"
+                    android:text="@string/editor_btn_change"/>
+            </RelativeLayout>
+            <ImageView
+                android:id="@+id/img_book_thumbnail"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:scaleType="fitXY"
+                android:src="@drawable/default_book"
+                android:layout_height="150dp"
+                android:layout_marginLeft="8dp"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="16dp"
+            android:background="#ff0000"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                style="@style/DetailsActivityBookAttributesStyle"
+                android:text="@string/editor_book_info_title"/>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <EditText
+                    android:id="@+id/edit_book_name"
+                    style="@style/EditorFieldStyle"
+                    android:hint="@string/editor_hint_name"
+                    android:inputType="textCapWords"/>
+                <EditText
+                    android:id="@+id/edit_book_price"
+                    style="@style/EditorFieldStyle"
+                    android:hint="@string/editor_hint_unit_price"
+                    android:inputType="number"/>
+                <EditText
+                    android:id="@+id/edit_book_quantity"
+                    style="@style/EditorFieldStyle"
+                    android:hint="@string/editor_hint_quantity"
+                    android:inputType="number"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="16dp"
+            android:background="#ff0000"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                style="@style/DetailsActivityBookAttributesStyle"
+                android:text="@string/editor_supplier_info_title"/>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/edit_supplier_name"
+                    style="@style/EditorFieldStyle"
+                    android:hint="@string/editor_hint_supplier_name"
+                    android:inputType="textCapWords" />
+
+                <EditText
+                    android:id="@+id/edit_supplier_phone"
+                    style="@style/EditorFieldStyle"
+                    android:hint="@string/editor_hint_supplier_phone_number"
+                    android:inputType="phone" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
